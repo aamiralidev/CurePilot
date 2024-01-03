@@ -14,6 +14,7 @@ bitsandbytes = "*"
 scipy = "*"
 sentencepiece = "*"
 protobuf = "*"
+tensorboardx = "*"
 
 [dev-packages]
 ipykernel = "*"
