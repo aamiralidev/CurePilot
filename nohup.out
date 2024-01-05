@@ -1,0 +1,30 @@
+ * Serving Flask app 'status'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8008
+ * Running on http://172.16.19.80:8008
+Press CTRL+C to quit
+172.16.103.199 - - [03/Jan/2024 17:04:47] "GET /gpu-status HTTP/1.1" 200 -
+172.16.103.199 - - [03/Jan/2024 17:04:47] "GET /favicon.ico HTTP/1.1" 404 -
+172.16.103.199 - - [03/Jan/2024 17:05:26] "GET /gpu-status HTTP/1.1" 200 -
+172.16.103.199 - - [03/Jan/2024 17:05:26] "GET /favicon.ico HTTP/1.1" 404 -
+172.16.103.199 - - [03/Jan/2024 17:05:58] "GET /gpu-status HTTP/1.1" 200 -
+172.16.103.199 - - [03/Jan/2024 17:06:06] "GET /gpu-status HTTP/1.1" 200 -
+172.16.103.199 - - [03/Jan/2024 17:06:14] "GET /gpu-status HTTP/1.1" 200 -
+172.16.103.199 - - [03/Jan/2024 17:20:41] "GET /gpu-status HTTP/1.1" 200 -
+172.16.103.199 - - [03/Jan/2024 17:48:47] "GET /gpu-status HTTP/1.1" 200 -
+172.16.103.199 - - [03/Jan/2024 18:05:22] "GET /gpu-status HTTP/1.1" 200 -
+172.16.103.199 - - [03/Jan/2024 19:58:21] "GET /gpu-status HTTP/1.1" 200 -
+172.16.103.199 - - [04/Jan/2024 14:30:59] "GET /gpu-status HTTP/1.1" 200 -
+172.16.103.199 - - [04/Jan/2024 15:44:30] "GET /gpu-status HTTP/1.1" 200 -
+172.16.103.199 - - [04/Jan/2024 16:52:30] "GET /gpu-status HTTP/1.1" 200 -
+172.16.103.199 - - [04/Jan/2024 17:05:46] "GET /gpu-status HTTP/1.1" 200 -
+172.16.103.199 - - [04/Jan/2024 17:18:43] "GET /gpu-status HTTP/1.1" 200 -
+172.16.103.199 - - [04/Jan/2024 17:19:59] "GET /gpu-status HTTP/1.1" 200 -
+172.16.103.199 - - [04/Jan/2024 17:38:27] "GET /gpu-status HTTP/1.1" 200 -
+172.16.103.199 - - [04/Jan/2024 17:46:08] "GET /gpu-status HTTP/1.1" 200 -
+172.16.103.199 - - [04/Jan/2024 19:51:06] "GET /gpu-status HTTP/1.1" 200 -
+172.16.103.199 - - [04/Jan/2024 20:29:56] "GET /gpu-status HTTP/1.1" 200 -
+172.16.103.199 - - [04/Jan/2024 20:34:14] "GET /gpu-status HTTP/1.1" 200 -
+172.16.103.199 - - [04/Jan/2024 20:38:29] "GET /gpu-status HTTP/1.1" 200 -
