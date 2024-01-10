@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    'debug_toolbar',
     'rest_framework',
     'corsheaders',
     'djoser',
@@ -50,6 +52,7 @@ MIDDLEWARE = [
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     'corsheaders.middleware.CorsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -137,6 +140,8 @@ REST_FRAMEWORK = {
 
 SIMPLE_JWT = {
 	'AUTH_HEADER_TYPES' : ('JWT',),
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=5),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
 
 DJOSER = {
@@ -149,10 +154,20 @@ CORS_ALLOWED_ORIGINS = [
     'http://*',
     'https://*',
     'http://127.0.0.1:5173',
+    'https://127.0.0.1:5173',
+    'http://127.0.0.1:3000',
 ]
 
 CORS_ALLOW_HEADERS = [
     'access-control-allow-origin',
     'authorization',
     'content-type',
+]
+
+CORS_ALLOW_CREDENTIALS = True
+
+INTERNAL_IPS = [
+    # ...
+    '127.0.0.1',
+    # ...
 ]

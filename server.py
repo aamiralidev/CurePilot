@@ -11,7 +11,7 @@ from http import HTTPStatus
 from fastapi.responses import JSONResponse, StreamingResponse
 
 import openai_api_protocol
-from model import ModelPipelineLoader
+from curepilot.chat.engine.model import ModelPipelineLoader
 
 
 
@@ -73,13 +73,13 @@ async def create_chat_completion(raw_request: Request):
 
 
 if __name__ == "__main__":
-    # model_id = '/mnt/sda/Aamir/FineTunned/Mistral'
-    # pipe = ModelPipelineLoader(model_id)
-    # llm = HuggingFacePipeline(pipeline=pipe.get_pipeline(), model_kwargs={'temperature': 0})
-    # instruction = "{text}"
-    # template = ModelPipelineLoader.get_prompt(instruction)
-    # prompt = PromptTemplate(template=template, input_variables=["text"])
-    # model['pipeline'] = LLMChain(prompt=prompt, llm=llm, verbose=True)
+    model_id = '/mnt/sda/Aamir/FineTunned/Mistral'
+    pipe = ModelPipelineLoader(model_id)
+    llm = HuggingFacePipeline(pipeline=pipe.get_pipeline(), model_kwargs={'temperature': 0})
+    instruction = "{text}"
+    template = ModelPipelineLoader.get_prompt(instruction)
+    prompt = PromptTemplate(template=template, input_variables=["text"])
+    model['pipeline'] = LLMChain(prompt=prompt, llm=llm, verbose=True)
     model['pipeline'] = lambda text: text
 
     # Run
