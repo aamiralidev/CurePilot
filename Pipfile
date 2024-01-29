@@ -21,6 +21,9 @@ langchain-openai = "*"
 tiktoken = "*"
 chromadb = "*"
 accelerate = "==0.21.0"
+sentence-transformers = "*"
+pythonnet = "*"
+pymilvus = "==2.2.5"
 
 [dev-packages]
 ipykernel = "*"
